@@ -1,5 +1,5 @@
 <script>
-
+  export let value;
 </script>
 
 <style>
@@ -29,4 +29,4 @@
   }
 </style>
 
-<button class="square" />
+<button class="square">{value}</button>

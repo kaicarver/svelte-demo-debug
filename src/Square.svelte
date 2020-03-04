@@ -13,6 +13,8 @@
     height: 34px;
     margin-right: -1px;
     margin-top: -1px;
+    margin-bottom: 0px;
+    border-radius: 0px;
     padding: 0;
     text-align: center;
     width: 34px;

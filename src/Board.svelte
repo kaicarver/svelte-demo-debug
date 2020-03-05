@@ -2,6 +2,7 @@
   import Square from "./Square.svelte";
 
   let status = "Next player: X";
+  let num = 1;
 </script>
 
 <style>
@@ -19,18 +20,18 @@
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-    <Square value="1" />
-    <Square value="2" />
-    <Square value="3" />
+    <Square value={num++} />
+    <Square value={num++} />
+    <Square value={num++} />
   </div>
   <div class="board-row">
-    <Square />
-    <Square />
-    <Square />
+    <Square value={num++} />
+    <Square value={num++} />
+    <Square value={num++} />
   </div>
   <div class="board-row">
-    <Square />
-    <Square />
-    <Square />
+    <Square value={num++} />
+    <Square value={num++} />
+    <Square value={num++} />
   </div>
 </div>

@@ -30,4 +30,4 @@
   }
 </style>
 
-<button class="square">{value}</button>
+<button class="square" on:click={() => alert('click' + value)}>{value}</button>

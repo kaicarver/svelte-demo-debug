@@ -9,13 +9,14 @@
     float: left;
     font-size: 24px;
     font-weight: bold;
-    line-height: 34px;
+    line-height: 24px;
     height: 34px;
     margin-right: -1px;
     margin-top: -1px;
     margin-bottom: 0px;
     border-radius: 0px;
     padding: 0;
+    padding-bottom: 1px;
     text-align: center;
     width: 34px;
   }

@@ -1,5 +1,6 @@
 <script>
   export let value = '?';
+  let label = ''
 </script>
 
 <style>
@@ -30,4 +31,4 @@
   }
 </style>
 
-<button class="square" on:click={() => alert('click' + value)}>{value}</button>
+<button class="square" on:click={() => label = 'X'}>{label}</button>

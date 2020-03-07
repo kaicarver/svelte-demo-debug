@@ -3,6 +3,7 @@
 
   let status = "Next player: X";
   let num = 1;
+  let squares = Array(9).fill(null)
 </script>
 
 <style>
@@ -20,18 +21,18 @@
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-    <Square value={num++} />
-    <Square value={num++} />
-    <Square value={num++} />
+    <Square value={squares[num++]} />
+    <Square value={squares[num++]} />
+    <Square value={squares[num++]} />
   </div>
   <div class="board-row">
-    <Square value={num++} />
-    <Square value={num++} />
-    <Square value={num++} />
+    <Square value={squares[num++]} />
+    <Square value={squares[num++]} />
+    <Square value={squares[num++]} />
   </div>
   <div class="board-row">
-    <Square value={num++} />
-    <Square value={num++} />
-    <Square value={num++} />
+    <Square value={squares[num++]} />
+    <Square value={squares[num++]} />
+    <Square value={squares[num++]} />
   </div>
 </div>

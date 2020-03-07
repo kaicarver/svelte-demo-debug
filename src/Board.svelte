@@ -2,7 +2,7 @@
   import Square from "./Square.svelte";
 
   let status = "Next player: X";
-  let num = 1;
+  let num = 0;
   let squares = Array(9).fill(null)
 </script>
 

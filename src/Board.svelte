@@ -2,9 +2,7 @@
   import Square from "./Square.svelte";
 
   let status = "Next player: X";
-  let num = 0;
-  let init = Array(9).fill('*');
-  let squares = init;
+  let squares = Array(9).fill(null);
 </script>
 
 <style>
@@ -18,26 +16,22 @@
     margin-bottom: 10px;
   }
 </style>
-debug:<br>
-init array:<br>
-{init}<br>
-squares array:<br>
-{squares}<br>
+
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-    <Square bind:value={squares[num]}/>{num++}
-    <Square bind:value={squares[num]}/>{num++}
-    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[0]}/>
+    <Square bind:value={squares[1]}/>
+    <Square bind:value={squares[2]}/>
   </div>
   <div class="board-row">
-    <Square bind:value={squares[num]}/>{num++}
-    <Square bind:value={squares[num]}/>{num++}
-    <Square bind:value={squares[num]}/>{num++}
-  </div>
+    <Square bind:value={squares[3]}/>
+    <Square bind:value={squares[4]}/>
+    <Square bind:value={squares[5]}/>
+   </div>
   <div class="board-row">
-    <Square bind:value={squares[num]}/>{num++}
-    <Square bind:value={squares[num]}/>{num++}
-    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[6]}/>
+    <Square bind:value={squares[7]}/>
+    <Square bind:value={squares[8]}/>
   </div>
 </div>

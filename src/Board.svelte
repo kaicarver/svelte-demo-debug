@@ -3,7 +3,8 @@
 
   let status = "Next player: X";
   let num = 0;
-  let squares = Array(9).fill('*')
+  let init = Array(9).fill('*');
+  let squares = init;
 </script>
 
 <style>
@@ -17,22 +18,26 @@
     margin-bottom: 10px;
   }
 </style>
-debug: squares array: {squares}
+debug:<br>
+init array:<br>
+{init}<br>
+squares array:<br>
+{squares}<br>
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-    <Square bind:value={squares[num++]} />
-    <Square bind:value={squares[num++]} />
-    <Square bind:value={squares[num++]} />
+    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[num]}/>{num++}
   </div>
   <div class="board-row">
-    <Square bind:value={squares[num++]} />
-    <Square bind:value={squares[num++]} />
-    <Square bind:value={squares[num++]} />
+    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[num]}/>{num++}
   </div>
   <div class="board-row">
-    <Square bind:value={squares[num++]} />
-    <Square bind:value={squares[num++]} />
-    <Square bind:value={squares[num++]} />
+    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[num]}/>{num++}
+    <Square bind:value={squares[num]}/>{num++}
   </div>
 </div>

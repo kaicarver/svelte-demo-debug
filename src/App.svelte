@@ -13,6 +13,10 @@
     padding-left: 30px;
   }
 
+  .credits {
+    font-size: 50%;
+  }
+
   .game {
     display: flex;
     flex-direction: row;
@@ -33,6 +37,13 @@
   <div class="game">
     <div class="game-board">
       <Board />
+      <p class="credits">
+        <a href="https://github.com/kaicarver/svelte-demo">Source on Github</a>,
+        created after
+        <a href="https://github.com/kaicarver/react-demo">doing</a>
+        the excellent
+        <a href="https://reactjs.org/tutorial/tutorial.html">React tutorial</a>.
+      </p>
     </div>
     <div class="game-info">
       <div>

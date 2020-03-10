@@ -30,4 +30,4 @@
   }
 </style>
 
-<button class="square" on:click={() => value = 'X'}>{value || ''}</button>
+<button class="square" on:click={() => value = value == 'X' ? 'O' : 'X'}>{value || ''}</button>

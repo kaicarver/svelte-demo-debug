@@ -1,5 +1,6 @@
 <script>
   export let value = '?';
+  export let onclick;
 </script>
 
 <style>
@@ -30,4 +31,4 @@
   }
 </style>
 
-<button class="square" on:click={() => value = value == 'X' ? 'O' : 'X'}>{value || ''}</button>
+<button class="square" on:click={() => {if (!value) value = onclick}}>{value || ''}</button>

@@ -4,6 +4,16 @@
   let status = "Next player: ";
   let squares = Array(9).fill(null);
   let onclick = 'X';
+  let winner = null;
+  $: {
+    winner = calculateWinner(squares);
+    if (winner) {
+      status = "Winner: " + winner;
+      onclick = null;
+    } else {
+      status = "Next player: " + onclick;
+    }
+  }
 
   function calculateWinner(squares) {
     const lines = [
@@ -39,7 +49,7 @@
 </style>
 
 <div>
-  <div class="status" on:click={alert(calculateWinner(squares))}>{status} {onclick}</div>
+  <div class="status">{status}</div>
   <div class="board-row">
     <!-- I wonder if there's a way to number the squares by the DOM element number?... -->
     <Square bind:value={squares[0]} bind:onclick/>

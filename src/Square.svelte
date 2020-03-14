@@ -31,4 +31,4 @@
   }
 </style>
 
-<button class="square" on:click={() => { value = onclick; onclick = onclick == 'X' ? 'O' : 'X'; }}>{value || ''}</button>
+<button class="square" on:click={() => { if (onclick) { value = onclick; onclick = onclick == 'X' ? 'O' : 'X'; }}}>{value || ''}</button>

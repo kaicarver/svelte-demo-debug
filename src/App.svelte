@@ -39,7 +39,9 @@
       <Board />
       <p class="credits">
         <a href="https://github.com/kaicarver/svelte-demo">Source on Github</a>,
-        created after
+        adapted for
+        <a href="https://svelte.dev/">Svelte</a>
+        after
         <a href="https://github.com/kaicarver/react-demo">doing</a>
         the excellent
         <a href="https://reactjs.org/tutorial/tutorial.html">React tutorial</a>.

@@ -33,6 +33,10 @@
   }
 </style>
 
+<svelte:head>
+	<title>Svelte Tic-tac-toe</title>
+</svelte:head>
+
 <main>
   <div class="game">
     <div class="game-board">

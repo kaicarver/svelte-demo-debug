@@ -1,6 +1,13 @@
 <script>
   export let value = '?';
-  export let onclick;
+  export let nextValue;
+
+  function handleClick() {
+    if (nextValue) {
+      value = nextValue;
+      nextValue = nextValue == 'X' ? 'O' : 'X';
+    }
+  }
 </script>
 
 <style>
@@ -31,4 +38,6 @@
   }
 </style>
 
-<button class="square" on:click={() => { if (onclick) { value = onclick; onclick = onclick == 'X' ? 'O' : 'X'; }}}>{value || ''}</button>
+<button class="square" on:click={handleClick}>
+  {value || ''}
+</button>

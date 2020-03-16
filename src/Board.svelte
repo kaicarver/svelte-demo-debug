@@ -2,7 +2,7 @@
   import Square from "./Square.svelte";
 
   let status;
-  let squares = Array(9).fill(null);
+  export let squares;
   let nextValue = 'X';
   let winner = null;
   $: squares, console.log('squares has been updated, non-nulls: ' + squares.filter(x => x != null).length);

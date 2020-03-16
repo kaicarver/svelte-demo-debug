@@ -1,10 +1,11 @@
 <script>
   import Square from "./Square.svelte";
 
-  let status = "Next player: ";
+  let status;
   let squares = Array(9).fill(null);
   let nextValue = 'X';
   let winner = null;
+  $: squares, console.log('squares has been updated, non-nulls: ' + squares.filter(x => x != null).length);
   $: {
     winner = calculateWinner(squares);
     if (winner) {
@@ -58,6 +59,7 @@
     <Square bind:value={squares[2]} bind:nextValue/>
   </div>
   <div class="board-row">
+  {@debug} 
     <Square bind:value={squares[3]} bind:nextValue/>
     <Square bind:value={squares[4]} bind:nextValue/>
     <Square bind:value={squares[5]} bind:nextValue/>

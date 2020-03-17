@@ -42,7 +42,7 @@
 <main>
   <div class="game">
     <div class="game-board">
-      <Board bind:squares={squares}/>
+      <Board bind:squares/>
       <p class="credits">
         <a href="https://github.com/kaicarver/svelte-demo">Source on Github</a>,
         adapted for

@@ -62,7 +62,7 @@
   .game-info {
     margin-left: 20px;
   }
-  
+
   .status {
     margin-bottom: 10px;
   }
@@ -82,18 +82,9 @@
   <div class="game">
     <div class="game-board">
       <Board bind:squares bind:nextValue/>
-      <p class="credits">
-        <a href="https://github.com/kaicarver/svelte-demo">Source on Github</a>,
-        adapted for
-        <a href="https://svelte.dev/">Svelte</a>
-        after
-        <a href="https://github.com/kaicarver/react-demo">doing</a>
-        the excellent
-        <a href="https://reactjs.org/tutorial/tutorial.html">React tutorial</a>.
-      </p>
     </div>
     <div class="game-info">
-      <div>
+      <div class="status">
         {status}
       </div>
       <ol>
@@ -103,4 +94,13 @@
       </ol>
     </div>
   </div>
+  <p class="credits">
+    <a href="https://github.com/kaicarver/svelte-demo">Source on Github</a>,
+    adapted for
+    <a href="https://svelte.dev/">Svelte</a>
+    after
+    <a href="https://github.com/kaicarver/react-demo">doing</a>
+    the excellent
+    <a href="https://reactjs.org/tutorial/tutorial.html">React tutorial</a>.
+  </p>
 </main>

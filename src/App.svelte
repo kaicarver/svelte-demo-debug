@@ -1,7 +1,10 @@
 <script>
   import Board from "./Board.svelte";
 
-  let squares = Array(9).fill(null);
+  let history = [{
+        squares: Array(9).fill(null),
+      }];
+  let squares = history[0].squares;
   let nextValue = 'X';
   let winner = null;
   let status;

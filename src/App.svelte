@@ -1,16 +1,21 @@
 <script>
   import Board from "./Board.svelte";
 
+  let squares = Array(9).fill(null);
   let history = [{
-        squares: Array(9).fill(null),
+        squares: [...squares],
       }];
-  let squares = history[0].squares;
+
   let nextValue = 'X';
   let winner = null;
   let status;
 
   $: squares, console.log('squares has been updated, non-nulls: ' + squares.filter(x => x != null).length);
   $: {
+    history = history.concat([{
+        squares: [...squares],
+    }]);
+    console.log(history)
     winner = calculateWinner(squares);
     if (winner) {
       status = "Winner: " + winner;
@@ -18,7 +23,7 @@
     } else {
       status = "Next player: " + nextValue;
     }
-    // console.log("calculated") // why is this code executed twice for every click?
+    console.log("calculated") // why is this code executed twice for every click?
   }
 
   function calculateWinner(squares) {

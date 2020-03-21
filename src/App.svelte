@@ -12,7 +12,7 @@
 
   $: squares, console.log('squares has been updated, non-nulls: ' + squares.filter(x => x != null).length);
   $: {
-    history = history.concat([[...squares]]);
+    history.push([...squares]);
     console.log(history)
     winner = calculateWinner(squares);
     if (winner) {

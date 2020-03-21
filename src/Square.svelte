@@ -1,11 +1,11 @@
 <script>
-  export let value = '?';
+  export let value;
   export let nextValue;
 
   function handleClick() {
     if (nextValue) {
       value = nextValue;
-      nextValue = nextValue == 'X' ? 'O' : 'X';
+      nextValue = nextValue == "X" ? "O" : "X";
     }
   }
 </script>
@@ -16,28 +16,10 @@
 
 <style>
   .square {
-    background: #fff;
-    border: 1px solid #999;
     float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 24px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    margin-bottom: 0px;
-    border-radius: 0px;
     padding: 0;
-    padding-bottom: 1px;
-    text-align: center;
+    height: 34px;
     width: 34px;
-  }
-
-  .square:focus {
-    outline: none;
-  }
-
-  .square:focus {
-    background: #ddd;
+    line-height: 24px;
   }
 </style>

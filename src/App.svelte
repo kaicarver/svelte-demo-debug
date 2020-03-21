@@ -4,9 +4,7 @@
   // configuration of the 9 Tic-tac-toe squares in a board, initially empty
   let squares = Array(9).fill(null);
   // all the successive configurations of the board in a game
-  let history = [
-    [...squares],
-  ];
+  let history = [[...squares]];
 
   let nextValue = 'X';
   let winner = null;

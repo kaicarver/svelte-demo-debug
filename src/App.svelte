@@ -1,13 +1,9 @@
 <script>
   import Board from "./Board.svelte";
 
-  // configuration of the 9 Tic-tac-toe squares in a board, initially empty
   let squares = Array(3).fill(null);
-  // all the successive configurations of the board in a game
   let history = [[...squares]];
-
   let nextValue = 'X';
-  let winner = null;
   let status;
   let count = 0;
 
@@ -36,11 +32,6 @@
         {status}<br>
         history size: {count}
       </div>
-      <ol>
-        <ul>
-          <!-- /* TODO */ -->
-        </ul>
-      </ol>
     </div>
   </div>
 </main>
@@ -49,15 +40,6 @@
   main {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
-  }
-
-  ol,
-  ul {
-    padding-left: 30px;
-  }
-
-  .credits {
-    font-size: 50%;
   }
 
   .game {
@@ -71,12 +53,6 @@
 
   .status {
     margin-bottom: 10px;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
   }
 </style>
 

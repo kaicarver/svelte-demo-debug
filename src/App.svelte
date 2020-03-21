@@ -1,10 +1,12 @@
 <script>
   import Board from "./Board.svelte";
 
+  // configuration of the 9 Tic-tac-toe squares in a board, initially empty
   let squares = Array(9).fill(null);
-  let history = [{
-        squares: [...squares],
-      }];
+  // all the successive configurations of the board in a game
+  let history = [
+    [...squares],
+  ];
 
   let nextValue = 'X';
   let winner = null;
@@ -12,9 +14,7 @@
 
   $: squares, console.log('squares has been updated, non-nulls: ' + squares.filter(x => x != null).length);
   $: {
-    history = history.concat([{
-        squares: [...squares],
-    }]);
+    history = history.concat([[...squares]]);
     console.log(history)
     winner = calculateWinner(squares);
     if (winner) {

@@ -2,13 +2,14 @@
   import Board from "./Board.svelte";
 
   // configuration of the 9 Tic-tac-toe squares in a board, initially empty
-  let squares = Array(9).fill(null);
+  let squares = Array(3).fill(null);
   // all the successive configurations of the board in a game
   let history = [[...squares]];
 
   let nextValue = 'X';
   let winner = null;
   let status;
+  let count = 0;
 
   $: squares, console.log('squares has been updated, non-nulls: ' + squares.filter(x => x != null).length);
   $: {
@@ -21,6 +22,7 @@
     } else {
       status = "Next player: " + nextValue;
     }
+    count = history.length;
     console.log("calculated") // why is this code executed twice for every click?
   }
 
@@ -91,7 +93,8 @@
     </div>
     <div class="game-info">
       <div class="status">
-        {status}
+        {status}<br>
+        history size: {count}
       </div>
       <ol>
         <ul>

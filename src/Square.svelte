@@ -10,6 +10,10 @@
   }
 </script>
 
+<button class="square" on:click={handleClick}>
+  {value || ''}
+</button>
+
 <style>
   .square {
     background: #fff;
@@ -37,7 +41,3 @@
     background: #ddd;
   }
 </style>
-
-<button class="square" on:click={handleClick}>
-  {value || ''}
-</button>

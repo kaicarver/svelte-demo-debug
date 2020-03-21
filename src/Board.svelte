@@ -6,9 +6,7 @@
 </script>
 
 <div>
-  <div>
-    <Square bind:value={squares[0]} bind:nextValue/>
-    <Square bind:value={squares[1]} bind:nextValue/>
-    <Square bind:value={squares[2]} bind:nextValue/>
-  </div>
+  <Square bind:value={squares[0]} bind:nextValue/>
+  <Square bind:value={squares[1]} bind:nextValue/>
+  <Square bind:value={squares[2]} bind:nextValue/>
 </div>

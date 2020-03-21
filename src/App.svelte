@@ -2,15 +2,17 @@
   import Square from "./Square.svelte";
 
   let squares = Array(3).fill(null);
-  let history = [];
+  let history;
   console.log("history: ", history);
   let nextValue = "X";
   let status;
   let count = 0;
 
   $: {
-    // why is this code executed twice at the start?
-    history.push([...squares]);
+    if (history)
+      history.push([...squares]);
+    else
+      history = [];
     console.log("history: ", history);
     status = "Next player: " + nextValue;
     count = history.length;

@@ -13,9 +13,9 @@
     else
       history = [];
     console.log("history1: ", history);
-    status = "Next player: " + nextValue;
     count = history.length;
   }
+  $: status = "Next player: " + nextValue;
 </script>
 
 <h2>Game 1, composed of 3 Square components:</h2>

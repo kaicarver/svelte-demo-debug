@@ -17,8 +17,8 @@
   }
   $: status = "Next player: " + nextValue;
 
-  function handleClick() {
-      alert('hi');
+  function handleClick(s) {
+      alert(s);
   }
 </script>
 

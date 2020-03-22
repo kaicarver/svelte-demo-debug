@@ -6,7 +6,7 @@
   export let handleClick;
 </script>
 
-<div on:click={handleClick}>
+<div on:click={handleClick(squares)}>
   <Square bind:value={squares[0]} bind:nextValue/>
   <Square bind:value={squares[1]} bind:nextValue/>
   <Square bind:value={squares[2]} bind:nextValue/>

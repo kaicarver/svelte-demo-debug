@@ -16,10 +16,14 @@
     count = history.length;
   }
   $: status = "Next player: " + nextValue;
+
+  function handleClick() {
+      alert('hi');
+  }
 </script>
 
 <h2>Game 3, Board composed of Squares, but TODO: use function?</h2>
-<Board3 bind:squares bind:nextValue/>
+<Board3 bind:squares bind:nextValue handleClick={handleClick}/>
 
 <div class="status">
   {status}

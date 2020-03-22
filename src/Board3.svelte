@@ -1,5 +1,5 @@
 <script>
-  import Square from "./Square.svelte";
+  import Square from "./Square3.svelte";
 
   export let squares;
   export let nextValue;

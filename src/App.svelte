@@ -1,6 +1,7 @@
 <script>
   import Game1 from "./Game1.svelte";
   import Game2 from "./Game2.svelte";
+  import Game3 from "./Game3.svelte";
 </script>
 
 <h1>
@@ -9,6 +10,7 @@ Mini-tic-tac-toe to illustrate a problem I had with Svelte:
 
 <Game1/>
 <Game2/>
+<Game3/>
 
 <p>In Game 1, history works as expected. 
 In Game 2, history gets erroneously updated twice for every click in a square.</p>
